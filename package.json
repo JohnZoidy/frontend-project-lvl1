@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/JohnZoidy/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/JohnZoidy/frontend-project-lvl1/actions)",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,11 +14,20 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "bugs": {
     "url": "https://github.com/JohnZoidy/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/JohnZoidy/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/JohnZoidy/frontend-project-lvl1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "2.4.1"
+  }
 }
-
