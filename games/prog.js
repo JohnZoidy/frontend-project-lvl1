@@ -1,5 +1,5 @@
 /* eslint no-console: "off", import/extensions: "off" */
-import play from '../src/index.js';
+import { play } from '../src/index.js';
 
 console.log('What number is missing in the progression?');
 const makeProg = () => {
