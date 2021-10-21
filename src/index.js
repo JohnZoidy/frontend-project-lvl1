@@ -3,7 +3,7 @@
 import readlineSync from 'readline-sync';
 import UsrName from '../bin/brain-games.js';
 
-export const ranNumber = () => Math.floor(Math.random() * 100 + 1);// random number generator
+export const ranNumber = (min, max) => Math.floor(Math.random() * max + min);// number generator
 const getAnswer = ([expression, rightIn]) => {
   const answer = readlineSync.question(`Question: ${expression}\nYour answer: `);
   if (answer === rightIn) {

@@ -5,7 +5,7 @@ console.log('Answer "yes" if the number is even, otherwise answer "no"');
 const expression = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const number = ranNumber();
+    const number = ranNumber(1, 100);
     let rightOut = 'no';
     if (number % 2 === 0) {
       rightOut = 'yes';

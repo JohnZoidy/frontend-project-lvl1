@@ -15,7 +15,7 @@ const isPrime = (num1) => {
 const expression = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const number1 = ranNumber();
+    const number1 = ranNumber(1, 100);
     result.push([`${number1}`, isPrime(number1)]);
   }
   return result;

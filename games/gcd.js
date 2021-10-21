@@ -15,8 +15,8 @@ const gcd = (num1, num2) => {
 const expression = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const number1 = ranNumber();
-    const number2 = ranNumber();
+    const number1 = ranNumber(1, 100);
+    const number2 = ranNumber(1, 100);
     result.push([`${number1} ${number2}`, gcd(number1, number2)]);
   }
   return result;

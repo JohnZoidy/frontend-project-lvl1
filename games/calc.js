@@ -5,8 +5,8 @@ console.log('What is the result of the expression?');
 const expression = () => {
   const result = [];
   for (let i = 0; i < 3; i += 1) {
-    const number1 = ranNumber();
-    const number2 = ranNumber();
+    const number1 = ranNumber(1, 100);
+    const number2 = ranNumber(1, 100);
     const operators = ['+', '-', '*'];
     const operator = operators[Math.floor(Math.random() * operators.length)];
     let rightOut = '';
