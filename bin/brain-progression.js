@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 /* eslint no-console: "off", import/extensions: "off" */
-import brainEven from '../games/even.js';
+import brainProg from '../games/prog.js';
 
-brainEven();
+brainProg();
