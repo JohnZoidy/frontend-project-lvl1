@@ -5,7 +5,7 @@ console.log('What number is missing in the progression?');
 const makeProg = () => {
   const Prog = []; // result progression
   let rightAnswer = ''; // result right answer
-  const progLength = Math.floor(Math.random() * 5 + 5);// random length generator
+  const progLength = Math.floor(Math.random() * 5 + 6);// random length generator
   let progFirst = Math.floor(Math.random() * 10 + 1);// random first number generator
   const progIncr = Math.floor(Math.random() * 10 + 1);// random icrement generator
   Prog.push(progFirst); // add frist number to progression
