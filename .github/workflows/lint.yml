@@ -4,6 +4,8 @@ jobs:
   lint-job:
     runs-on: ubuntu-latest
     steps:
+        env:
+        CI: true
       - name: lint-step
         run: |
-          make lint
+        make lint
