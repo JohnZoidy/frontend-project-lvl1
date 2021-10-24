@@ -1,7 +1,7 @@
 /* eslint no-console: "off", import/extensions: "off" */
-import { ranNumber, play } from '../src/index.js';
+import { ranNumber, play, gamesCount } from '../index.js';
+import { Greetings } from '../cli.js';
 
-console.log('Find the greatest common divisor of given numbers.');
 const gcd = (num1, num2) => {
   let smaller = num1;
   if (num1 > num2) {
@@ -14,7 +14,7 @@ const gcd = (num1, num2) => {
 }; // find gcd
 const expression = () => {
   const result = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < gamesCount; i += 1) {
     const number1 = ranNumber(1, 100);
     const number2 = ranNumber(1, 100);
     result.push([`${number1} ${number2}`, gcd(number1, number2)]);
@@ -22,6 +22,8 @@ const expression = () => {
   return result;
 };// return 3 pairs of answer-expression
 const brainGcd = () => {
+  Greetings();
+  console.log('Find the greatest common divisor of given numbers.');
   play(expression());
 };
 export default brainGcd;

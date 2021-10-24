@@ -5,17 +5,22 @@
 
 ### My own codeclimate and linter status:
 [![lint](https://github.com/JohnZoidy/frontend-project-lvl1/actions/workflows/lint.yml/badge.svg)](https://github.com/JohnZoidy/frontend-project-lvl1/actions/workflows/lint.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d97c41625d9d09a0e096/maintainability)](https://codeclimate.com/github/JohnZoidy/frontend-project-lvl1/maintainability)
+
 
 ## Описание проекта
 
 
 Данный проект представляет из себя сборку консольных мини-игр, в которых игрок должен правильно ответить на поставленные вопросы:
-- Является ли число четным? (brain-even)
-- Чему равен результат выражения? (brain-calc)
-- Чему равен наибольший общий делитель двух чисел? (brain-gcd)
-- Какое число пропущенно в прогрессии? (brain-progression)
-- Является ли число простым? (brain-prime)
+- Является ли число четным? 
+    brain-even
+- Чему равен результат выражения?
+    brain-calc
+- Чему равен наибольший общий делитель двух чисел?
+    brain-gcd
+- Какое число пропущенно в прогрессии?
+    brain-progression
+- Является ли число простым?
+    brain-prime
 
 
 ### Setup

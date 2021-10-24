@@ -1,7 +1,7 @@
 /* eslint no-console: "off", import/extensions: "off" */
-import { play, ranNumber } from '../src/index.js';
+import { play, ranNumber, gamesCount } from '../index.js';
+import { Greetings } from '../cli.js';
 
-console.log('What number is missing in the progression?');
 const makeProg = () => {
   const Prog = []; // result progression
   let rightAnswer = ''; // result right answer
@@ -19,12 +19,14 @@ const makeProg = () => {
 }; // make progression
 const expression = () => {
   const result = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < gamesCount; i += 1) {
     result.push(makeProg());
   }
   return result;
 };// return 3 pairs of answer-expression
 const brainProg = () => {
+  Greetings();
+  console.log('What number is missing in the progression?');
   play(expression());
 };
 export default brainProg;
