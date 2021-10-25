@@ -3,7 +3,7 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
 
-### My own codeclimate and linter status:
+### My own linter status:
 [![lint](https://github.com/JohnZoidy/frontend-project-lvl1/actions/workflows/lint.yml/badge.svg)](https://github.com/JohnZoidy/frontend-project-lvl1/actions/workflows/lint.yml)
 
 
@@ -11,16 +11,26 @@
 
 
 Данный проект представляет из себя сборку консольных мини-игр, в которых игрок должен правильно ответить на поставленные вопросы:
-- Является ли число четным? 
+- Является ли число четным?
+```javascript
     brain-even
+```
 - Чему равен результат выражения?
+```javascript
     brain-calc
+```
 - Чему равен наибольший общий делитель двух чисел?
+```javascript
     brain-gcd
+```
 - Какое число пропущенно в прогрессии?
+```javascript
     brain-progression
+```
 - Является ли число простым?
+```javascript
     brain-prime
+```
 
 
 ### Setup
