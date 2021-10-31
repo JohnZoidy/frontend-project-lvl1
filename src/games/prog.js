@@ -1,32 +1,31 @@
 /* eslint no-console: "off", import/extensions: "off" */
 import { play, ranNumber, gamesCount } from '../index.js';
-import { Greetings } from '../cli.js';
 
 const makeProg = () => {
-  const Prog = []; // result progression
-  let rightAnswer = ''; // result right answer
-  const progLength = ranNumber(6, 6);// random length generator
-  let progFirst = ranNumber(1, 10);// random first number generator
-  const progIncr = ranNumber(1, 10);// random icrement generator
-  Prog.push(progFirst); // add frist number to progression
+  const Prog = [];
+  const progLength = ranNumber(6, 6);
+  const progFirst = ranNumber(1, 10);
+  const progStep = ranNumber(1, 10);
   for (let i = 0; i < progLength - 1; i += 1) {
-    progFirst += progIncr;
-    Prog.push(progFirst);
-  } // make rest of progression
-  rightAnswer = Prog[progLength - 4].toString();
-  Prog[progLength - 4] = '..';
-  return [Prog.join(' '), rightAnswer];
-}; // make progression
+    Prog[i] = progFirst + i * progStep;
+  }
+  return Prog;
+};
+
 const expression = () => {
   const result = [];
+
   for (let i = 0; i < gamesCount; i += 1) {
-    result.push(makeProg());
+    const prog = makeProg();
+    const rightIndex = ranNumber(0, prog.length);
+    const rightAnswer = prog[rightIndex];
+    prog[rightIndex] = '..';
+    result.push([prog.join(' '), rightAnswer.toString()]);
   }
   return result;
-};// return 3 pairs of answer-expression
+};
+
 const brainProg = () => {
-  Greetings();
-  console.log('What number is missing in the progression?');
-  play(expression());
+  play(expression(), 'What number is missing in the progression?');
 };
 export default brainProg;

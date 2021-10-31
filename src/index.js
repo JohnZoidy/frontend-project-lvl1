@@ -1,12 +1,18 @@
 /* eslint no-console: "off", import/extensions: "off", no-restricted-syntax: "off" */
 import readlineSync from 'readline-sync';
-import name from './cli.js';
 
-export const ranNumber = (min, max) => Math.floor(Math.random() * max + min);// number generator
+export const ranNumber = (min, max) => Math.floor(Math.random() * max + min);
 export const gamesCount = 3;
-export const play = (exp) => {
+
+export const play = (exp, rules) => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log('Welcome to the Brain Games!');
+  if (!exp || !rules) {
+    return console.log(`Hello, ${name}!`);
+  }
+  console.log(`Hello, ${name}!`);
+  console.log(rules);
   for (const tmp of exp) {
-    console.log(tmp);
     const answer = readlineSync.question(`Question: ${tmp[0]}\nYour answer: `);
     if (answer === tmp[1]) {
       console.log('Correct!');
@@ -15,4 +21,4 @@ export const play = (exp) => {
     }
   }
   return console.log(`Congratulations, ${name}!`);
-}; // game cycle and congrats
+};

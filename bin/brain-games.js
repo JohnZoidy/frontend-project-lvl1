@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 /* eslint no-console: "off", import/extensions: "off" */
-import { Greetings } from '../src/cli.js';
+import { play } from '../src/index.js';
 
-Greetings();
+play();
