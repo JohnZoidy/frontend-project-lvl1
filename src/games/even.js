@@ -1,19 +1,19 @@
-/* eslint no-console: "off", import/extensions: "off" */
-import { ranNumber, play, gamesCount } from '../index.js';
+import { play, gamesCount } from '../index.js';
+import ranNumber from '../rangen.js';
 
 const isEven = (num) => num % 2 === 0;
 
-const expression = () => {
-  const result = [];
+const roundsDataGenerator = () => {
+  const roundsData = [];
   for (let i = 0; i < gamesCount; i += 1) {
     const number = ranNumber(1, 100);
     const rightOut = isEven(number) ? 'yes' : 'no';
-    result.push([number, rightOut]);
+    roundsData.push([number, rightOut]);
   }
-  return result;
+  return roundsData;
 };
 
 const brainEven = () => {
-  play(expression(), 'Answer "yes" if the number is even, otherwise answer "no"');
+  play(roundsDataGenerator(), 'Answer "yes" if the number is even, otherwise answer "no"');
 };
 export default brainEven;

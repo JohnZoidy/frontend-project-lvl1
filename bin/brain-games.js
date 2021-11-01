@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-/* eslint no-console: "off", import/extensions: "off" */
-import { play } from '../src/index.js';
+import readlineSync from 'readline-sync';
 
-play();
+const name = readlineSync.question('May I have your name? ');
+console.log('Welcome to the Brain Games!');
+console.log(`Hello, ${name}!`);

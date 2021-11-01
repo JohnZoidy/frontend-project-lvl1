@@ -1,31 +1,31 @@
-/* eslint no-console: "off", import/extensions: "off" */
-import { play, ranNumber, gamesCount } from '../index.js';
+import { play, gamesCount } from '../index.js';
+import ranNumber from '../rangen.js';
 
-const makeProg = () => {
-  const Prog = [];
+const generateProgression = () => {
+  const progression = [];
   const progLength = ranNumber(6, 6);
   const progFirst = ranNumber(1, 10);
   const progStep = ranNumber(1, 10);
   for (let i = 0; i < progLength - 1; i += 1) {
-    Prog[i] = progFirst + i * progStep;
+    progression[i] = progFirst + i * progStep;
   }
-  return Prog;
+  return progression;
 };
 
-const expression = () => {
-  const result = [];
+const roundsDataGenerator = () => {
+  const roundsData = [];
 
   for (let i = 0; i < gamesCount; i += 1) {
-    const prog = makeProg();
+    const prog = generateProgression();
     const rightIndex = ranNumber(0, prog.length);
     const rightAnswer = prog[rightIndex];
     prog[rightIndex] = '..';
-    result.push([prog.join(' '), rightAnswer.toString()]);
+    roundsData.push([prog.join(' '), rightAnswer.toString()]);
   }
-  return result;
+  return roundsData;
 };
 
 const brainProg = () => {
-  play(expression(), 'What number is missing in the progression?');
+  play(roundsDataGenerator(), 'What number is missing in the progression?');
 };
 export default brainProg;
