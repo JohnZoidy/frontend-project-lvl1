@@ -1,12 +1,12 @@
-import { play, gamesCount } from '../index.js';
-import ranNumber from '../rangen.js';
+import { play, roundsCount } from '../index.js';
+import generateRandomNumber from '../generateRandomNumber.js';
 
 const isEven = (num) => num % 2 === 0;
 
 const roundsDataGenerator = () => {
   const roundsData = [];
-  for (let i = 0; i < gamesCount; i += 1) {
-    const number = ranNumber(1, 100);
+  for (let i = 0; i < roundsCount; i += 1) {
+    const number = generateRandomNumber(1, 100);
     const rightOut = isEven(number) ? 'yes' : 'no';
     roundsData.push([number, rightOut]);
   }

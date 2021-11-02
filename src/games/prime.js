@@ -1,25 +1,26 @@
-import { play, gamesCount } from '../index.js';
-import ranNumber from '../rangen.js';
+import { play, roundsCount } from '../index.js';
+import generateRandomNumber from '../generateRandomNumber.js';
 
 const isPrime = (num) => {
-  if (num === 2) {
-    return true;
-  }
   if (num === 1 || num % 2 === 0) {
     return false;
   }
-  const halfnumber = (num + 1) / 2;
-  let counter = 2;
-  while (num % counter !== 0 && counter < halfnumber) {
-    counter += 1;
+  if (num === 2) {
+    return true;
   }
-  return counter === halfnumber;
+  const halfnumber = num / 2;
+  for (let i = 2; i < halfnumber; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const roundsDataGenerator = () => {
   const roundsData = [];
-  for (let i = 0; i < gamesCount; i += 1) {
-    const number1 = ranNumber(1, 100);
+  for (let i = 0; i < roundsCount; i += 1) {
+    const number1 = generateRandomNumber(1, 100);
     const rightAnswer = isPrime(number1) ? 'yes' : 'no';
     roundsData.push([`${number1}`, rightAnswer]);
   }
