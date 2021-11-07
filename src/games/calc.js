@@ -14,7 +14,7 @@ const getRightAnswer = (num1, num2, opr) => {
   }
 };
 
-const roundsDataGenerator = () => {
+const generateData = () => {
   const roundsData = [];
   const operators = ['+', '-', '*'];
   for (let i = 0; i < roundsCount; i += 1) {
@@ -27,6 +27,7 @@ const roundsDataGenerator = () => {
 };
 
 const brainCalc = () => {
-  play(roundsDataGenerator(), 'What is the result of the expression?');
+  const rules = 'What is the result of the expression?';
+  play(generateData(), rules);
 };
 export default brainCalc;

@@ -3,7 +3,7 @@ import generateRandomNumber from '../generateRandomNumber.js';
 
 const isEven = (num) => num % 2 === 0;
 
-const roundsDataGenerator = () => {
+const generateData = () => {
   const roundsData = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const number = generateRandomNumber(1, 100);
@@ -14,6 +14,7 @@ const roundsDataGenerator = () => {
 };
 
 const brainEven = () => {
-  play(roundsDataGenerator(), 'Answer "yes" if the number is even, otherwise answer "no"');
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no"';
+  play(generateData(), rules);
 };
 export default brainEven;

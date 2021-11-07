@@ -15,7 +15,7 @@ const getGCD = (num1, num2) => {
   return (number1 + number2);
 };
 
-const roundsDataGenerator = () => {
+const generateData = () => {
   const roundsData = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const number1 = generateRandomNumber(1, 100);
@@ -26,6 +26,7 @@ const roundsDataGenerator = () => {
 };
 
 const brainGcd = () => {
-  play(roundsDataGenerator(), 'Find the greatest common divisor of given numbers.');
+  const rules = 'Find the greatest common divisor of given numbers.';
+  play(generateData(), rules);
 };
 export default brainGcd;

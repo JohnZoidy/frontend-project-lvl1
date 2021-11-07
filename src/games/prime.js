@@ -17,7 +17,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const roundsDataGenerator = () => {
+const generateData = () => {
   const roundsData = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const number1 = generateRandomNumber(1, 100);
@@ -28,6 +28,7 @@ const roundsDataGenerator = () => {
 };
 
 const brainPrime = () => {
-  play(roundsDataGenerator(), 'Answer "yes" if given number is prime. Otherwise answer "no".');
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  play(generateData(), rules);
 };
 export default brainPrime;

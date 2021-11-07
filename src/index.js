@@ -15,5 +15,6 @@ export const play = (roundsData, rules) => {
     }
     console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
+  return undefined;
 };
